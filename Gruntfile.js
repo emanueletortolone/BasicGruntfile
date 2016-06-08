@@ -1,10 +1,18 @@
 module.exports = function(grunt){
     var jsVendorsDependencies =  [
+        /*  Place your Vendors JS paths here:
         
+            "libs/modernizr.2.8.2.min.js",
+            "libs/jquery/jquery-2.2.4.min.js"
+        */ 
     ];
     
     var jsMain = [
+        /*  Place your Project JS paths here:
         
+            "project/models/AppModel.js"
+            "project/controllers/AppController.js"
+        */
     ];
     
     grunt.initConfig({ 
