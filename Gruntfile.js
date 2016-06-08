@@ -8,7 +8,7 @@ module.exports = function(grunt){
     ];
     
     var jsMain = [
-        /*  Place your Project JS paths here:
+        /*  Place your Project JS paths here: 
         
             "project/models/AppModel.js"
             "project/controllers/AppController.js"
