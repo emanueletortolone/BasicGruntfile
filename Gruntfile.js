@@ -18,12 +18,21 @@ module.exports = function(grunt){
     grunt.initConfig({ 
         
         watch: {
+            
             scripts: {
               files: jsMain,
               tasks: ['concat:main'],
               options: {
                 interrupt: true
               }
+            },
+            
+            styles: {
+                files: ['css/less/**/*.less', 'css/less/**/**/*.less'],
+                tasks: ['less'],
+                options: {
+                    nospawn: true
+                }
             }
         },
         
@@ -47,6 +56,18 @@ module.exports = function(grunt){
                     dest: 'dist/main.concat.js'
                 }]
             }
+        },
+        
+        less: {
+            development: {
+                options: {
+                    //compress: true,
+                    optimization: 2
+                },
+                files: {
+                    "css/dist/style.css" : "css/less/style.less" 
+                }
+            }
         }
         
         
@@ -56,8 +77,9 @@ module.exports = function(grunt){
     /*  Dist tasks */
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-less');
     
     
     /*  Start task */
-    grunt.registerTask('default', ['concat:vendors', 'concat:main']);
+    grunt.registerTask('default', ['concat:vendors', 'concat:main', 'less', 'watch']);
 };
