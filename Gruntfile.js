@@ -28,7 +28,7 @@ module.exports = function(grunt){
             },
             
             styles: {
-                files: ['css/less/**/*.less', 'css/less/**/**/*.less'],
+                files: ['css/less/**/*.less'],
                 tasks: ['less'],
                 options: {
                     nospawn: true
