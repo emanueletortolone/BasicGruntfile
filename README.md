@@ -26,5 +26,5 @@ $ grunt less
 
 ```sh
 # Watch js in jsMain and all the less files to run 'concat:main', 'less' tasks
-$ gulp watch
+$ grunt watch
 ```
